@@ -1,0 +1,102 @@
+{
+  "status": "ok",
+  "totalResults": 3,
+  "articles": [
+    {
+      "source": { "id": "bbc-sport", "name": "BBC Sport" },
+      "author": null,
+      "title": "Cricket World Cup: New Zealand v Netherlands",
+      "description": "Follow live text, in-play video clips and radio commentary as New Zealand play the Netherlands in the Men's Cricket World Cup 2023.",
+      "url": "http://www.bbc.co.uk/sport/live/cricket/66854373",
+      "urlToImage": "https:////m.files.bbci.co.uk/modules/bbc-morph-sport-seo-meta/1.23.3/images/bbc-sport-logo.png",
+      "publishedAt": "2023-10-09T08:37:18.2661254Z",
+      "content": "New Zealand: Devon Conway, Will Young, Rachin Ravindra, Daryl Mitchell, Tom Latham (capt &amp; wk), Glenn Phillips, Mark Chapman, Mitchell Santner, Matt Henry, Lockie Ferguson, Trent Boult.\r\nNetherla… [+189 chars]"
+    },
+    {
+      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "author": null,
+      "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+      "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+      "publishedAt": "2020-04-27T11:41:47Z",
+      "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+    },
+    {
+      "source": { "id": "espn-cric-info", "name": "ESPN Cric Info" },
+      "author": null,
+      "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+      "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+      "publishedAt": "2020-03-30T15:26:05Z",
+      "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+    },
+    {
+      "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "US car strike escalates as expands to Ford's biggest plant",
+      "description": "The move is a sharp escalation of the union's ongoing strike against Ford, General Motors and Stellantis.",
+      "url": "http://www.bbc.co.uk/news/business-67085700",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/11093/production/_131397796_gettyimages-1728335821.jpg",
+      "publishedAt": "2023-10-12T07:37:18.442228Z",
+      "content": "The United Auto Workers (UAW) union has expanded its ongoing strike by shutting down Ford's biggest plant.\r\nThe UAW said 8,700 workers walked out of the truck plant in Kentucky, in response to Ford r… [+1278 chars]"
+      },
+      {
+      "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Sergio Brown: Ex-NFL player charged with his mother's murder",
+      "description": "Former Patriots player Sergio Brown's mother was found dead near her home in Chicago last month.",
+      "url": "http://www.bbc.co.uk/news/world-us-canada-67085546",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1511F/production/_131130368_gettyimages-480752900.jpg",
+      "publishedAt": "2023-10-12T07:37:17.005086Z",
+      "content": "A former NFL player has been charged with the murder of his mother after being arrested in California on Tuesday. \r\nAuthorities had been searching for Sergio Brown since his mother Myrtle Brown, 73, … [+1550 chars]"
+      },
+      {
+      "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Painting stolen in art heist more than 30 years ago returned to Glasgow museum",
+      "description": "The piece has returned to Glasgow Museums, after being put up for auction by an unsuspecting seller.",
+      "url": "http://www.bbc.co.uk/news/entertainment-arts-67080739",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1477/production/_131393250_picjpg.jpg",
+      "publishedAt": "2023-10-12T07:22:17.2240737Z",
+      "content": "A painting stolen during a museum heist in Glasgow more than 30 years ago has been found after being put up for auction by an unsuspecting seller.\r\nThieves deactivated an alarm system and climbed up … [+4733 chars]"
+      },
+      {
+      "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Every Hamas member is a dead man, Netanyahu says",
+      "description": "It comes after the first meeting of Israel's emergency government, formed on Wednesday.",
+      "url": "http://www.bbc.co.uk/news/world-middle-east-67082351",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/148C9/production/_131396148_f48452e16dd4596fd5a6456a4eaaedc73482e8fa0_0_5217_34781000x667.jpg",
+      "publishedAt": "2023-10-11T22:22:16.5264474Z",
+      "content": "Israel's Prime Minister Benjamin Netanyahu said every Hamas member was \"a dead man\" after the first meeting of his country's emergency government.\r\nAlongside him, opposition figure Benny Gantz said i… [+3461 chars]"
+      },
+      {
+      "source": {
+      "id": "bbc-news",
+      "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Why Republican Steve Scalise is not House Speaker yet",
+      "description": "He won a secret vote to be the Republican pick but now he needs majority support of the full House.",
+      "url": "http://www.bbc.co.uk/news/world-us-canada-67060856",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9A87/production/_131395593_a86d181170f5e34135d8f335f929bf66ff4d44a40_0_5373_35821000x667.jpg",
+      "publishedAt": "2023-10-11T22:07:17.9637077Z",
+      "content": "Republicans have picked Steve Scalise as their choice to be the new Speaker of the House of Representatives after a secret vote.\r\nHe beat the other candidate, Jim Jordan, 113 votes to 99, in a closed… [+3734 chars]"
+      }
+    
+  ]
+}

@@ -23,7 +23,7 @@ export class News extends Component {
     let url = `https://newsapi.org/v2/top-headlines?country=In&apiKey=3c6eacc0ba2d4034bf74f2ca4e263d86&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
-    this.setState({loading:true});
+    this.setState({ loading: true });
     let data = await fetch(url);
     let parseData = await data.json();
     console.log(parseData);
@@ -31,35 +31,34 @@ export class News extends Component {
       page: this.state.page - 1,
       articles: parseData.articles,
       totalResults: parseData.totalResults,
-      loading:false
+      loading: false,
     });
   };
   handleNextClick = async () => {
     console.log("next");
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 12))) {
       let url = `https://newsapi.org/v2/top-headlines?country=In&apiKey=3c6eacc0ba2d4034bf74f2ca4e263d86&page=${
-      this.state.page + 1
-    }&pageSize=${this.props.pageSize}`;
-    this.setState({loading:true});
-    let data = await fetch(url);
-    let parseData = await data.json();
-    console.log(parseData);
-    this.setState({
-      page: this.state.page + 1,
-      articles: parseData.articles,
-      totalResults: parseData.totalResults,
-      loading:false
-    });
-      
+        this.state.page + 1
+      }&pageSize=${this.props.pageSize}`;
+      this.setState({ loading: true });
+      let data = await fetch(url);
+      let parseData = await data.json();
+      console.log(parseData);
+      this.setState({
+        page: this.state.page + 1,
+        articles: parseData.articles,
+        totalResults: parseData.totalResults,
+        loading: false,
+      });
+    }
   };
-}
 
   render() {
     console.log("Render");
     return (
       <div className="container my-3">
         <h1 className="text-center">NewsBook - top Headlines</h1>
-        {this.state.loading &&<Spinner/>}
+        {this.state.loading && <Spinner />}
 
         <div className="row">
           {this.state.articles.map((Element) => {
@@ -92,8 +91,10 @@ export class News extends Component {
             class="btn btn-dark"
             disabled={
               this.state.page + 1 >
-              Math.ceil(this.state.totalResults/this.props.pageSize)}
-            onClick={this.handleNextClick}>
+              Math.ceil(this.state.totalResults / this.props.pageSize)
+            }
+            onClick={this.handleNextClick}
+          >
             Next &rarr;
           </button>
         </div>

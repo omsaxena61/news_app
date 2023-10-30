@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <Link className="navbar-brand" to="#">
               NewsBook
-            </a>
+            </Link>
+
             <button
               class="navbar-toggler"
               type="button"
@@ -23,15 +25,68 @@ export class Navbar extends Component {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/about">
+                {/* <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/about">
                     About
-                  </a>
+                  </Link>
+                </li> */}
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/business">
+                   
+                    Business
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  {" "}
+                  <Link
+                    className="nav-link"
+                    aria-current="page"
+                    to="/entertainment"
+                  >
+                    {" "}
+                    Entertainment
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  {" "}
+                  <Link className="nav-link" aria-current="page" to="/general">
+                    {" "}
+                    General
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  {" "}
+                  <Link className="nav-link" aria-current="page" to="/health">
+                    {" "}
+                    Health
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/science">
+                    {" "}
+                    Science
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/sports">
+                    {" "}
+                    Sports
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    aria-current="page"
+                    to="/technology"
+                  >
+                    {" "}
+                    Technology
+                  </Link>
                 </li>
               </ul>
             </div>

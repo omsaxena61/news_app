@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
+import LoadingBar from 'react-top-loading-bar';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export class News extends Component {
@@ -30,30 +31,35 @@ export class News extends Component {
   }
 
   async updateNews() {
+    this.props.setProgress(10);
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=79c43d9e71644c96812888270ce4fb0d&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
+    this.props.setProgress(40);
     let parsedata = await data.json();
+    this.props.setProgress(70);
     console.log(parsedata);
     this.setState({
       articles: parsedata.articles,
       totalResults: parsedata.totalResults,
       loading: false,
     });
+    this.props.setProgress(100);
   }
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=79c43d9e71644c96812888270ce4fb0d&page=1&pageSize=${this.props.pageSize}`;
-    this.setState({ loading: true });
-    let data = await fetch(url);
-    let parsedata = await data.json();
-    console.log(parsedata);
-    this.setState({
-      articles: parsedata.articles,
-      totalResults: parsedata.totalResults,
-      loading: false,
-    });
-    console.log("cdm");
+    // let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=79c43d9e71644c96812888270ce4fb0d&page=1&pageSize=${this.props.pageSize}`;
+    // this.setState({ loading: true });
+    // let data = await fetch(url);
+    // let parsedata = await data.json();
+    // console.log(parsedata);
+    // this.setState({
+    //   articles: parsedata.articles,
+    //   totalResults: parsedata.totalResults,
+    //   loading: false,
+    // });
+    // console.log("cdm");
+    this.updateNews();
   }
 
   handlePrevClick = async () => {
@@ -136,7 +142,7 @@ export class News extends Component {
             <div className="row">
               {this.state.articles.map((Element) => {
                 return (
-                  <div className="col-md-4" key={Element.url}>
+                  <div className="col-md-4" key={Element.url} >
                     <Newsitem
                       title={Element.title ? Element.title.slice(0, 45) : ""}
                       description={

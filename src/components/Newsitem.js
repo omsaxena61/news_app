@@ -2,14 +2,25 @@ import React, { Component } from "react";
 
 export class Newsitem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date ,source} = this.props; //destrcturing
+    let { title, description, imageUrl, newsUrl, author, date, source } =
+      this.props; //destrcturing
     return (
       <div className="my-3">
         <div className="card">
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{left:'90%', zIndex:"1" ,color:"gold",margin:"15px"}}>
-              {source}
-                <span class="visually-hidden">unread messages</span>
-              </span>
+          <div style={{display:'flex',justifyContent:'flex-end',position:'absolute',right:'0'}}>
+          <span
+            className=" badge rounded-pill "
+            style={{
+              backgroundColor:"black",
+              color: "red",
+              
+            }}
+          >
+            {source}
+            {/* <span class="visually-hidden">unread messages</span> */}
+          </span>
+          </div>
+
           <img
             src={
               !imageUrl
@@ -20,10 +31,7 @@ export class Newsitem extends Component {
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">
-              {title}...Example heading{" "}
-              
-            </h5>
+            <h5 className="card-title">{title}...Example heading </h5>
             <p className="card-text">{description}...</p>
             <p class="card-text">
               <small class="text-body-secondary">
@@ -31,7 +39,11 @@ export class Newsitem extends Component {
                 {new Date(date).toGMTString()}{" "}
               </small>
             </p>
-            <a href={newsUrl} className="btn btn-sm btn-dark" style={{color:"gold"}}>
+            <a
+              href={newsUrl}
+              className="btn btn-sm btn-dark"
+              style={{ color: "gold" }}
+            >
               Read more...
             </a>
           </div>

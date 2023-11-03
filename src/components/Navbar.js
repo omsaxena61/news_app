@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 export class Navbar extends Component {
   render() {
     return (
-      <div>
+      <div >
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
+          <div class="container-fluid" >
+           
             <Link
               className="navbar-brand"
               to="#"
@@ -15,7 +16,7 @@ export class Navbar extends Component {
             >
               NewsBook
             </Link>
-
+            
             <button
               class="navbar-toggler"
               type="button"
@@ -27,7 +28,7 @@ export class Navbar extends Component {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style={{paddingLeft:"20%",paddingRight:"20%"}}>
               <ul
                 class="navbar-nav me-auto mb-2 mb-lg-0"
                 style={{ fontSize: "25px"}}

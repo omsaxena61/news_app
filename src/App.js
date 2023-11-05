@@ -1,4 +1,4 @@
-import "./App.css";
+
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
@@ -25,7 +25,7 @@ export default class App extends Component {
           />
           <Navbar />
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/" key={1}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
                key="general"
                 country="in"
@@ -34,7 +34,7 @@ export default class App extends Component {
               />
             </Route>
 
-            <Route exact path="/business">
+            <Route exact path="/business" key={2}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
              key="business"
                 country="in"
@@ -43,7 +43,7 @@ export default class App extends Component {
               />
             </Route>
 
-            <Route exact path="/entertainment">
+            <Route exact path="/entertainment" key={3}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
            key="entertainment"
                 country="in"
@@ -52,7 +52,7 @@ export default class App extends Component {
               />
             </Route>
 
-            <Route exact path="/general">
+            <Route exact path="/general" key={4}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
              key="general"
                 country="in"
@@ -61,11 +61,11 @@ export default class App extends Component {
               />
             </Route>
 
-            <Route exact path="/health">
+            <Route exact path="/health" key={5}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey} key="health" country="in" pageSize={9} category="health" />
             </Route>
 
-            <Route exact path="/science">
+            <Route exact path="/science" key={6}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
                key="science"
                 country="in"
@@ -74,11 +74,11 @@ export default class App extends Component {
               />
             </Route>
 
-            <Route exact path="/sports">
+            <Route exact path="/sports" key={7}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey} key="sports" country="in" pageSize={9} category="sports" />
             </Route>
 
-            <Route exact path="/technology">
+            <Route exact path="/technology" key={8}>
               <News   setProgress={this.setProgress} apiKey={this.apiKey}
                 key="technology"
                 country="in"

@@ -9,9 +9,7 @@ const News = (props)=> {
   const [page, setpage] = useState(1)
   const [totalResults, settotalResults] = useState(0)
   const [loading, setloading] = useState(true)
-  // document.title = `${capitalizeFirstLetter(
-  //   props.category
-  // )} - NewsBook`;
+  
   const capitalizeFirstLetter=(string)=> {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -22,7 +20,7 @@ const News = (props)=> {
     const url = `https://newsapi.org/v2/top-headlines?country=${
       props.country
     }&category=${props.category}&apiKey=${props.apiKey}&page=${
-      page + 1
+      page 
     }&pageSize=${props.pageSize}`;
     
     setloading(true)
@@ -39,7 +37,11 @@ const News = (props)=> {
   }
 
   useEffect(() => {
+    document.title = `${capitalizeFirstLetter(
+    props.category
+  )} - NewsBook`;
      updateNews();
+     /* eslint-disable */
   
    
   }, [])
@@ -93,12 +95,15 @@ const News = (props)=> {
   //   this.updateNews();
   // };
 
+  
+
   const fetchMoreData = async () => {
     // a fake async api call like which sends
     // 20 more records in 1.5 secs
-    setpage(page+1)
     
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+    
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
+    setpage(page+1);
 
     let data = await fetch(url);
     let parsedata = await data.json();
@@ -106,12 +111,10 @@ const News = (props)=> {
     setarticles(articles.concat(parsedata.articles));
     settotalResults(parsedata.totalResults);
   };
-
-  
-    console.log("Render");
+    
     return (
       <>
-        <h1 className="text-center" style={{ margin: "35px 0px" }}>
+        <h1 className="text-center" style={{ margin: "35px 0px" ,marginTop:'90px'}}>
           NewsBook - Top Headlines
         </h1>
         {loading && <Spinner />}
@@ -122,7 +125,7 @@ const News = (props)=> {
           hasMore={articles.length !== totalResults}
           loader={<Spinner />}
         >
-          <div className="container">
+          <div className="container" style={{marginTop:'-10px'}}>
             <div className="row">
               {articles.map((Element) => {
                 return (

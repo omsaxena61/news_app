@@ -1,10 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Navbar=()=>{
-  
-  return (
+import SearchBar from "./SearchBar";
+const Navbar = (props) => {
+  const onSearch = async (searchTerm) => {
+    localStorage.setItem("searchTerm", searchTerm);
+    const url = `https://newsapi.org/v2/top-headlines?&apiKey=${props.apiKey}&q=${searchTerm}`;
 
-    <div >
+    let data = await fetch(url);
+    let parsedata = await data.json();
+    console.log(parsedata);
+    props.setData(parsedata.articles, parsedata.totalResults);
+  };
+
+  return (
+    <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link
@@ -124,13 +133,15 @@ const Navbar=()=>{
                   Technology
                 </Link>
               </li>
+              <li className="nav-item">
+                <SearchBar onSearch={onSearch} />
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
   );
-
-}
+};
 
 export default Navbar;

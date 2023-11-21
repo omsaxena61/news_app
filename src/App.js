@@ -7,18 +7,12 @@ const App = () => {
   const apiKey = process.env.REACT_APP_NEWS_API;
 
   const [progress, setprogress] = useState(0);
-  const [articles, setarticles] = useState([]);
-  const setData = (updatedArticles, updatedTotalResults) => {
-    setarticles(articles.concat(updatedArticles));
-    settotalResults(updatedTotalResults);
-  };
-  const [totalResults, settotalResults] = useState(0);
 
   return (
     <div>
       <Router>
         <LoadingBar height={4} color="#f11946" progress={progress} />
-        <Navbar setData={setData} />
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <News
@@ -28,7 +22,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="general"
-              setData={setData}
             />
           </Route>
 
@@ -40,7 +33,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="business"
-              setData={setData}
             />
           </Route>
 
@@ -52,7 +44,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="entertainment"
-              setData={setData}
             />
           </Route>
 
@@ -64,7 +55,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="general"
-              setData={setData}
             />
           </Route>
 
@@ -76,7 +66,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="health"
-              setData={setData}
             />
           </Route>
 
@@ -88,7 +77,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="science"
-              setData={setData}
             />
           </Route>
 
@@ -100,7 +88,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="sports"
-              setData={setData}
             />
           </Route>
 
@@ -112,7 +99,6 @@ const App = () => {
               country="in"
               pageSize={9}
               category="technology"
-              setData={setData}
             />
           </Route>
         </Switch>

@@ -16,33 +16,24 @@ const News = (props) => {
 
   const updateNews = async () => {
     props.setProgress(10);
-    let url = "";
-    if (localStorage.getItem("searchTerm"))
-      url = `https://newsapi.org/v2/top-headlines?country=${
-        props.country
-      }&category=${props.category}&q=${localStorage.getItem(
-        "searchTerm"
-      )}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
-    else
-      url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+
     setloading(true);
     let data = await fetch(url);
     props.setProgress(40);
     let parsedata = await data.json();
     props.setProgress(70);
     console.log(parsedata);
-    if (parsedata.status === "error") return;
     setarticles(parsedata.articles);
     settotalResults(parsedata.totalResults);
     setloading(false);
+
     props.setProgress(100);
   };
 
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - NewsBook`;
-
     updateNews();
-
     /* eslint-disable */
   }, []);
 
@@ -106,7 +97,8 @@ const News = (props) => {
     let data = await fetch(url);
     let parsedata = await data.json();
     console.log(parsedata);
-    props.setData(parsedata.articles, parsedata.totalResults);
+    setarticles(articles.concat(parsedata.articles));
+    settotalResults(parsedata.totalResults);
   };
 
   return (

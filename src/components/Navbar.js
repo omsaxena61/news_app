@@ -1,17 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
-const Navbar = (props) => {
-  const onSearch = async (searchTerm) => {
-    localStorage.setItem("searchTerm", searchTerm);
-    const url = `https://newsapi.org/v2/top-headlines?&apiKey=${props.apiKey}&q=${searchTerm}`;
-
-    let data = await fetch(url);
-    let parsedata = await data.json();
-    console.log(parsedata);
-    props.setData(parsedata.articles, parsedata.totalResults);
-  };
-
+const Navbar = () => {
   return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -132,9 +121,6 @@ const Navbar = (props) => {
                   {" "}
                   Technology
                 </Link>
-              </li>
-              <li className="nav-item">
-                <SearchBar onSearch={onSearch} />
               </li>
             </ul>
           </div>
